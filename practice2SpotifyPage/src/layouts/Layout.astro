@@ -1,0 +1,63 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-zinc-900" >
+		<div class="bg-black h-20" >
+			<header class="flex container mx-auto items-center justify-between h-full w-full max-w-[1100px] max-h-20" >
+				<img class="w-40 h-auto" src="/public/png-transparent-spotify-logo-logo-spotify-issuu-soundcloud-spotify-logo-white-text-logo-removebg-preview.png" alt="">
+				<menu class="flex gap-5">
+					<li class="flex items-center"><a href="#" class="text-white font-bold hover:text-green-600">Premium</a></li>
+					<li class="flex items-center"><a href="#" class="text-white font-bold hover:text-green-600">Ayuda</a></li>
+					<li class="flex items-center"><a href="#" class="text-white font-bold hover:text-green-600">Descargar</a></li>
+					<li class="text-white flex items-center">|</li>
+					<li class="flex items-center"><a href="#" class="text-slate-200 font-bold hover:text-green-600">Registrarse</a></li>
+					<li class="flex items-center"><a href="#" class="text-slate-200  font-bold hover:text-green-600">Iniciar Sesión</a></li>
+				</menu>
+			</header>
+			
+		</div>
+		
+
+		<div>
+			<div class="bg-gradient-to-b from-[#a88e9d] via-[#8e6f81 ] to-[#252123] h-24 bg-opacity-100"></div>
+			<div class="flex items-start max-w-xl mx-28 -mt-12">
+				<h1 class="text-white">
+					<span class="text-5xl font-bold">Disfruta de tu contenido favorito sin límites. Prueba Premium Individual gratis durante 1 mes.</span>
+					<div class="my-5 font-semibold">Después, solo 16.900 COP/mes. Cancela cuando quieras.</div>
+				</h1>
+
+				<div>
+					Probar gratis durante un mes.
+				</div>
+
+			</div>
+
+			<div>
+
+			</div>
+
+
+
+
+		</div>
+
+
+
+		<slot />
+	</body>
+</html>

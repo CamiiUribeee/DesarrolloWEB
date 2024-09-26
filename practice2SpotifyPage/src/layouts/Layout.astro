@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { Icon } from 'astro-icon/components';
 ---
 
 <!doctype html>
@@ -21,7 +22,7 @@ const { title } = Astro.props;
 			<header class="flex container mx-auto items-center justify-between h-full w-full max-w-[1100px] max-h-20" >
 				<img class="w-40 h-auto" src="/public/png-transparent-spotify-logo-logo-spotify-issuu-soundcloud-spotify-logo-white-text-logo-removebg-preview.png" alt="">
 				<menu class="flex gap-5">
-					<li class="flex items-center"><a href="#" class="text-white font-bold hover:text-green-600">Premium</a></li>
+					<li class="flex items-center"><a href="#" class="text-white font-bold hover:text-green-600">Premium</a><div class="absolute group-hover:block hidden top-[42px] w-60 bg-slate-500">submenu</div></li>
 					<li class="flex items-center"><a href="#" class="text-white font-bold hover:text-green-600">Ayuda</a></li>
 					<li class="flex items-center"><a href="#" class="text-white font-bold hover:text-green-600">Descargar</a></li>
 					<li class="text-white flex items-center">|</li>
@@ -43,7 +44,7 @@ const { title } = Astro.props;
 
 			</div>
 
-			<div class="flex items-center justify-center mx-28 my-4 bg-pink-200 rounded-full font-bold text-center h-12 w-72 cursor-pointer">
+			<div class="hover:scale-105 transition-transform hover:cursor-pointer hover:bg-pink-100 flex items-center justify-center mx-28 my-4 bg-pink-200 rounded-full font-bold text-center h-12 w-72 cursor-pointer">
 				Probar gratis durante un mes.
 			</div>
 
@@ -60,16 +61,68 @@ const { title } = Astro.props;
 		</div>
 
 		<div>
-			<div class="flex justify-center items-center text-neutral-100 my-36 font-bold">
-				<h1 class="text-5xl">Siente la diferencia</h1>
+			<div class="flex justify-center items-center text-neutral-100 mt-36 font-bold">
+				<h1 class="text-5xl block">Siente la diferencia</h1>
 			</div>
-			<div>
-				<span class="flex justify-center items-center text-neutral-100 -my-32">Pásate a Premium y disfruta del control total de lo que</span>
+			<div class="flex justify-center items-center text-neutral-100 mt-3">
+				<span class="text-2xl block">Pásate a Premium y disfruta del control total de lo que
+					<p class="flex justify-center items-center">escuchas. Cancela cuando quieras.</p>
+				</span>
+			</div>
+		</div>
+
+		<div class="">
+			<div class="text-white flex justify-center items-center mt-20">
+				<div class="mx-10">
+					<span class="text font-bold">Plan</span>
+					<p class="text font-bold">Spotify free</p>
+				</div>
+
+				<div class="text-white font-bold">
+					<div>
+						<Icon class="-mx-5" name="mdi:spotify" /><p class="flex items-center -mt-5">Planes</p>
+						<p class="">Premium</p>
+						<p>de Spotify</p>
+					</div>
+				</div>
 			</div>
 
-		
+			<div class="flex max-w-96 mx-auto items-center text-neutral-100 font-bold mt-8">
+				<span class="">Qué incluye</span>
+			</div>
+
+			<div class="text-white mt-3">
+				
+				<div class="border-b border-t mx-auto max-w-96 ">
+					<div class="">
+						<p class="underline decoration-dotted mt-3">Escucha tu música</p>
+						<p class="underline decoration-dotted">favorita sin anuncios</p>
+						<p class="mt-3"></p>
+
+						<div class="flex justify-center">
+							<Icon name="mdi:horizontal-line" />
+						</div>
+
+						<div>
+							<Icon name="mdi:check-circle-outline" />
+						</div>
+					</div>
+					
+					
+				</div>
+
+
+
+
+			</div>
+
+
+
+
+
 
 		</div>
+		<br><br><br><br><br><br><br>
 
 
 

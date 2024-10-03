@@ -1,0 +1,66 @@
+---
+interface Props {
+	title: string;
+}
+import { Icon } from 'astro-icon/components';
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot /> 
+
+		<div class="bg-black h-screen w-screen">
+			<header class="bg-zinc-900 h-12">
+				<div class="flex items-center justify-center h-12 container mx-auto">
+					<menu class="flex justify-center items-center text-white  gap-14 text-xs text-opacity-60">
+						<Icon class="size-5" name="mdi:apple" />
+						<li>Mac</li>
+						<li>Ipad</li>
+						<li>Iphone</li>
+						<li>Watch</li>
+						<li>AirPods</li>
+						<li>TV y Casa</li>
+						<li>Entretenimiento</li>
+						<li>Soporte</li>
+						<li>Dónde comprar</li>
+						<Icon class="size-6" name="mdi:search" />
+					</menu>
+				</div>
+			</header>
+
+			<div class="text-white flex flex-col items-center justify-center mt-10">
+				<span class="text-6xl font-semibold">iPhone 16 Pro</span>
+				<span class="mt-4 text-3xl font-semibold">Diseñado para Apple Inteligence</span>
+				<img class="mt-4" src="/public/Screenshot_1.png" alt="">
+
+				<span class="text-purple-300 mt-8 text-xl">Apple Inteligence estará disponible próximamente este año en inglés de Estados Unidos*</span>
+
+			</div>
+			<div class=" flex mx-auto justify-center items-center gap-4">
+				<div class="rounded-full bg-blue-600 text-white w-40 flex justify-center items-center h-10 mt-4">Más información</div>
+				<div class="rounded-full border border-b-2 border-sky-600 text-blue-600 w-28 flex justify-center items-center h-10 mt-4">Comprar</div>
+				
+			</div>
+			
+		</div>
+
+		<div class="bg-slate-100 h-screen w-screen">
+
+		</div>
+		
+
+
+
+
+	</body>
+</html>

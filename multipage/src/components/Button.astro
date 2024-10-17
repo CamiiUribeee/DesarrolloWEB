@@ -1,8 +1,16 @@
 ---
-
+const {del = false} = Astro.props; 
 ---
 
-<div class="items-center space-x-1 transition-colors bg-purple-400 hover:bg-purple-500 hover:cursor-pointer px-2 rounded inline-flex">
-    <slot name="icon" /> 
-    <slot name="text" />
+<div 
+    class="items-center space-x-1 transition-colors bg-purple-400 hover:bg-purple-500 hover:cursor-pointer px-2 rounded inline-flex" 
+    class:list={{"bg-red-500 hover:bg-red-700": del}}>
+    
+    <slot name="start-icon" /> 
+
+    <slot name="text">
+        Enviar
+    </slot>
+
+    <slot name="end-icon" /> 
 </div>

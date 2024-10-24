@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro"
 import Button from "../components/Button.astro"
 import { Icon } from 'astro-icon/components';
 
-const buttons = ["Aceptar", "enviar", "cancelar", "otro" ];
+const buttons = [{name: "Aceptar"}, {name: "enviar"}, {name: "cancelar"}, {name: "otro"} ];
 ---
 
 <Layout title="contacto">
@@ -27,7 +27,7 @@ const buttons = ["Aceptar", "enviar", "cancelar", "otro" ];
     <Icon class="size-96" name="svg-spinners:blocks-shuffle-3" />
     <span class="font-sans">Con mi propia fuente</span>
     {buttons.map((text) => {
-        return <Button><span slot="text">{text}</span></Button>
+        return <Button><span slot="text">{text.name}</span></Button>
     })}
 
 </Layout>

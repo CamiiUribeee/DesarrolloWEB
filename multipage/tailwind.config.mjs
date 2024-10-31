@@ -5,7 +5,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Playwrite', ...defaultTheme.fontFamily.sans],
+				myfont: ['myfont', ...defaultTheme.fontFamily.sans],
 			},
 		},
 

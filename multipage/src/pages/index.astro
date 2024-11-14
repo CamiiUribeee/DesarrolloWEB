@@ -11,11 +11,34 @@ import Layout from '../layouts/Layout.astro';
 	<div id="btn" class="bg-pink-400 p-3 inline-block">
 		presioname
 	</div>
+	<div class="embla">
+		<div class="embla__container p-12 h-52">
+		  <div class="embla__slide bg-purple-300 ">
+			Slide 1
+		  </div>
+
+		  <div class="embla__slide bg-blue-200">
+			Slide 2
+		  </div>
+
+		  <div class="embla__slide bg-yellow-100">
+			Slide 3
+		  </div>
+		</div>
+	</div>
+	  
 </Layout>
 
 
 
 <script>
+	import JSConfetti from 'js-confetti'
+	import EmblaCarousel from 'embla-carousel'
+	const emblaNode = document.querySelector('.embla')
+	const options = { loop: false }
+	EmblaCarousel(emblaNode, options)
+
+
 	const btn = document.getElementById("btn")
 
 	btn.addEventListener("click", function (e){
@@ -38,12 +61,35 @@ import Layout from '../layouts/Layout.astro';
 
 		document.body.appendChild(myDiv)
 
-	})
+		const jsConfetti = new JSConfetti()
+		jsConfetti.addConfetti()
 	
+		jsConfetti.addConfetti({
+   			emojis: ['♞', '✭', '🎼', '♬', '✞', '☠'],
+		})
 
+		
+
+
+	})
+
+	
 	
 																					
 
 
 </script>
+<style>
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+</style>
 

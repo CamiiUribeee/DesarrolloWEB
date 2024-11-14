@@ -6,5 +6,44 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Welcome to Astro.">
 	hola mundo
 	<div class="text-red-500">cruel</div>
+
+
+	<div id="btn" class="bg-pink-400 p-3 inline-block">
+		presioname
+	</div>
 </Layout>
+
+
+
+<script>
+	const btn = document.getElementById("btn")
+
+	btn.addEventListener("click", function (e){
+		const elm = e.target
+
+		//elm.classlist.remove("bg-red-400")
+		//elm.classList.add("bg-blue-400")
+		elm.classList.replace("bg-pink-400", "bg-blue-500")
+
+		elm.innerText = "Ouch"
+
+		const myDiv = document.createElement("div")
+		myDiv.innerText = "soy un div creado con js"
+		myDiv.classList.add("bg-green-500", "text-white")
+
+		myDiv.addEventListener("click", (e) => {
+			e.target.remove()
+			console.log("Harakiri", e.target)
+		})
+
+		document.body.appendChild(myDiv)
+
+	})
+	
+
+	
+																					
+
+
+</script>
 
